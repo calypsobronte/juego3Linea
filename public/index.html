@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="/assets/tic.ico"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego 3 en Linea</title>
+</head>
+<body>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/react@16.6.1/umd/react.development.js"
+    ></script>
+
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <!-- script de babel para poder usar JSX en la siguiente línea -->
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+
+    <script type="text/babel">
+        const app = document.getElementById('app');
+        class Juego extends React.Component {
+
+            render(){
+                return(
+                    <div class="jugadores">
+                    {/* Jugador X */}
+                    <div class="jugador" id="posicionX">
+                        <div class="letra">x</div>
+                        <div class="turno" id="turnoX"></div>
+                        <div>-</div>    
+                    </div>
+                    {/* Jugador O */}
+                    <div class="jugador" id="posicionO">
+                        <div class="letra">O</div>
+                        <div class="turno" id="turnoO"></div>
+                        <div>-</div>    
+                    </div>
+                    </div>
+                );
+
+            }
+
+        }
+
+        ReactDOM.render(<Juego />, app);    
+
+    </script>
+
+    <br/><br/>
+    <h1>
+    Juego 3 en línea <img src="https://image.flaticon.com/icons/svg/1191/1191134.svg" width="30" height="30" alt="Tic tac toe free icon" title="Tic tac toe free icon">
+    <br/>
+    <span> 🤓 👩‍💻 🦄 🔻</span>
+    </h1>
+
+    <div id="app"></div>
+
+</body>
+</html>
